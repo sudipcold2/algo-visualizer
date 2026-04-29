@@ -42,7 +42,7 @@ export default function ProblemLayout({
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors capitalize ${
                 activeTab === tab
-                  ? \`bg-surface-800 text-white border-b-2 \${activeBorder}\`
+                  ? `bg-surface-800 text-white border-b-2 ${activeBorder}`
                   : "text-white/50 hover:text-white hover:bg-white/5"
               }`}
             >
@@ -58,7 +58,7 @@ export default function ProblemLayout({
               <h2 className="text-2xl font-bold text-white">{title}</h2>
               <div className="flex gap-2">
                 <span className="px-2 py-1 text-xs font-semibold rounded-md bg-yellow-500/20 text-yellow-400">{difficulty}</span>
-                <span className={\`px-2 py-1 text-xs font-semibold rounded-md \${activeBgText}\`}>{category}</span>
+                <span className={`px-2 py-1 text-xs font-semibold rounded-md ${activeBgText}`}>{category}</span>
               </div>
               
               {descriptionNode}
@@ -87,13 +87,13 @@ export default function ProblemLayout({
           <div className="flex bg-black/40 border border-white/10 rounded-xl p-1 self-start">
             <button 
               onClick={() => setVisMode("graphical")}
-              className={\`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors \${visMode === "graphical" ? activeBgText : "text-white/50 hover:text-white"}\`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${visMode === "graphical" ? activeBgText : "text-white/50 hover:text-white"}`}
             >
               <MonitorPlay size={16} /> Graphical Visualizer
             </button>
             <button 
               onClick={() => setVisMode("dryrun")}
-              className={\`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors \${visMode === "dryrun" ? activeBgText : "text-white/50 hover:text-white"}\`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${visMode === "dryrun" ? activeBgText : "text-white/50 hover:text-white"}`}
             >
               <Code2 size={16} /> Dry Run Debugger
             </button>

@@ -4,8 +4,31 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AlgoVisual - Interactive Algorithm Learning",
-  description: "Learn algorithms through stunning, interactive visualizations.",
+  title: {
+    template: "%s | AlgoVisual",
+    default: "AlgoVisual - Interactive Algorithm Learning",
+  },
+  description: "Learn algorithms and data structures through stunning, interactive visualizations and line-by-line dry run debugging.",
+  keywords: ["algorithms", "data structures", "visualizer", "leetcode", "dry run", "coding interview", "education"],
+  authors: [{ name: "Sudip Ghosh" }],
+  creator: "Sudip Ghosh",
+  openGraph: {
+    title: "AlgoVisual - Interactive Algorithm Learning",
+    description: "Learn algorithms and data structures through stunning, interactive visualizations.",
+    url: "https://algo-visualizer.vercel.app", // Adjust if domain changes
+    siteName: "AlgoVisual",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AlgoVisual - Interactive Algorithm Learning",
+    description: "Learn algorithms and data structures through stunning, interactive visualizations.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
